@@ -1,0 +1,39 @@
+MODULES TO BE TESTED:
+	save
+	commands
+	find
+	checksave
+
+
+WORKING MODULES:
+	reader
+	init
+	insert
+	copy
+	cut
+	paste
+	undo	
+	tobot
+	totop
+
+BROKEN MODULES:
+	cursor: probably need to use arrowkey hexvals - getting keypress read incorrectly error - use scan codes instead of ascii codes?
+		ASCII Codes:
+		Up: 0x18 | 224 72
+		Down: 0x19 | 224 80
+		Right: 0x1A | 224 75
+		Left: 0x1B | 224 77
+
+		Scan Codes (linux-specific):
+		Up: 0x48
+		Left: 0x4B
+		Right: 0x4D
+		Down: 0x50
+		
+		scanf() raw mode results:
+		up: ^[[A \033[A -- octal ASCII vals where \033 is ascii escape
+		left: ^[[D \033[D
+		right ^[[C \033[C
+		down: ^[[B \033[B
+
+

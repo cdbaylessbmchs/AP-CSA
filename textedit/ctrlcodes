@@ -1,0 +1,15 @@
+https://www.ibm.com/docs/en/xl-fortran-aix/16.1.0?topic=appendix-ascii-ebcdic-character-sets
+
+C-c (copy line unless region selected): 0x03 * ETX
+C-v (paste line *see above): 0x16 * SYN
+C-x (cut line *see above): 0x18 * CAN
+C-z (undo - save window state, restore to last save | maybe define num of save in a header file?): 0x1A * SUB
+C-q (quit): 0x11 * DC1
+C-f (find regex): 0x06 * ACK
+C-s (save): 0x13 * DC3
+C-a (saveas): 0x01 * SOH
+C-y (select region): 0x19 * EM
+C-l (select line (maybe delete?)): 0x0C * FF
+C-[ (go to top): 0x1B * ESC
+C-] (go to bottom): 0x1C * GS
+C-n (new file): 0x0E * SO

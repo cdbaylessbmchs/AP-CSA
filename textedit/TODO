@@ -1,0 +1,23 @@
+ON DECK:
+	It was an EOF issue smh -__-
+	Cursor can go way too far right for some reason (might be a file scalar
+	thing)
+	tobot - C-j appears to be some sort of insertion thing, idk how to override
+
+PRIMARY:
+	scrolling
+	replace the gotos with break
+
+SECONDARY:
+	Syntax Highlighting
+	Use unctrl() to simplify regexes?
+	make up/down work all nicey-nice
+
+SALAD DRESSING:
+	Cleaning and reorganizing code
+
+BUGS:
+	Working (known): save, newfile, end, paste, find, saveas, cut and copy, 	key_up
+	Borked: , key_down (freezes everything, can't type or do commands), , undo, tobot - inserts a newline, trying to go past 0 in the array will break everything
+
+DEBUGGING NOTES:

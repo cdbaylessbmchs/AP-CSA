@@ -1,0 +1,25 @@
+File Interpretation (so we're a real interpreter)
+
+We need to be able to skip lines that begin with #
+And we need to eval lines that don't (multi-line matters not, unless I decide it does)
+
+Assumptions: args[1] is the name of the file if we pass like so 'ds file.ds'
+
+String filename = args[1];
+Path path = paths.get(filename);
+try {
+BufferedReader s = Files.newBufferedReader(path);
+String line;
+/* C-type getchar() kinda thing here */
+while ((line = s.readLine()) != null) {;
+      if (line.startsWith("#")) {
+      	 continue;
+      } else {
+      String[] cmds = line.split(" ");
+      String[] revcmds = strcheck(cmds);
+      	eval(line);
+	}
+}
+} catch (IOException e) {
+e.printStackTrace();
+}

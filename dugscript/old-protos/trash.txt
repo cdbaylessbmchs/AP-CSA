@@ -1,0 +1,271 @@
+		/*			  
+		    if (stack[i].getClass().getName().equals("mvariable")) {
+			System.out.println("Searching for " + stack[i].getClass().getName());
+			stack[i] = search(stack[i]);
+		    } else if (stack[i + 1].getClass().getName().equals("mvariable")) {
+			System.out.println("Searching for " + stack[i + 1].getClass().getName());
+			stack[i + 1] = search(stack[i + 1]);
+		    }
+		*/
+		    /* Go back to string */
+		    //TODO: get this working
+
+		//System.out.println(stack[i].getClass().getName());
+		//System.out.println(stack[i + 1].getClass().getName());
+		//System.out.println("tmp0: " + varname);
+				//correct here
+					    //System.out.println(vars);
+		//System.out.println("Variable: " + v.name());
+	    //System.out.println("v.equals called");
+	    		/* UNDER CONSTRUCTION - THE MATCHING NEEDS FIXING*/
+					    //System.out.println("tmp 0: " + tmp[0]);
+		    //System.out.println("tmp 1 : " + tmp[1]);
+		    //String[] tmp1 = tmp[1].split("]");
+		    //System.out.println("varname.contains called");		    //System.out.println("Returned index: " + tmp2);
+		    		    //return access(v.value(), Integer.parseInt(tmp[1]));
+				    	//System.out.println("value: " + val);
+	//System.out.println("arrval: " + arr[index]);
+		//correct here
+		//System.out.println("searching 1")
+		//System.out.println("searching 1")
+		//System.out.println("Stacked out: " + stack[i + 1]);
+		//System.out.println("Result at " + i + ": " + stack[i]);
+		//System.out.println("Variable set: " + tmp.name());
+
+
+    private static String[] strcheck(String[] input) {
+	/* 
+	   Find the strings in an array split on spaces 
+	   Return an array with the strings each in one spot
+	 */
+	/* Don't know how many strings we're gonna have */
+	List<String> tmp = new ArrayList<String>();
+	int numquote = 0;
+	String currtmp = "";
+	for (int i = 0; i < input.length; i++) {
+	    System.out.println("Current str: " + input[i]);
+	    if (input[i].contains("'")) {
+		System.out.println("Quote found: " + input[i]);
+		String str = input[i];
+		int x = 1;
+		while (!(input[i].contains("'"))) {
+		    str += input[i + x];
+		    System.out.println("Adding to str: " + str);
+		    x++;
+		}
+		if (input[i + x].equals("'")) {
+		    str += " ";
+		}
+		tmp.add(str);
+	    } else {
+		/* For commands to be on stack */
+		tmp.add(input[i]);
+	    }
+	//TODO: this breaks if the string is just a space...
+	//for (String str : input) {
+	    //if the string doesn't have a space, it'll do the whole shebang...
+	    // System.out.println("Current str: " + str);
+	    // if (str.contains("'") && ((numquote % 2) == 0)) {
+	    // 	System.out.println("String found: " + str);
+
+	    // }
+
+
+
+	    
+	    // if (str.contains("'") && ((numquote % 2) == 0)) {
+	    // 	//System.out.println("String found: " + str);
+	    // 	//Kinda hacky, but it works for now
+	    // 	if (str.endsWith("'")) {
+	    // 	//if (str.matches("'.*'")) {
+	    // 	    numquote++;
+	    // 	    // if (str.equals("")) {
+	    // 	    // 	str += " ";
+	    // 	    // }
+	    // 	    str = str.replace("'","");
+	    // 	    currtmp = str;
+	    // 	    tmp.add(currtmp);
+	    // 	}
+	    // 	str = str.replace("'","");
+	    // 	currtmp = str;
+	    // 	numquote++;
+	    // 	//if (str.equals("'")) {
+	    // 	//System.out.println("Found a space");
+	    // 	//tmp.add(" ");
+	    // 	//}
+	    // 	//continue;
+	    // 	//return;
+	    //  	//currtmp += " ";
+	    // 	// 	numquote++;
+	    // } else if (str.contains("'") && ((numquote % 2) != 0)) {
+	    // 	/* This should still pull a single string */
+	    // 	//System.out.println("String ended: " + str);
+	    // 	str = str.replace("'","");
+	    // 	//if (str.equals("")) {
+	    // 	//    str = " ";
+	    // 	//}
+	    // 	currtmp +=  " " + str;
+	    // 	numquote++;
+	    // 	//numquote = 0;
+	    // 	tmp.add(currtmp);
+	    // // } else if ((numquote % 2) != 0) {
+	    // //  	currtmp += " ";
+	    // //  	numquote++;
+	    // // } else if ((numquote % 2) != 0) {
+	    // // 	currtmp += " " + str;
+	    // } else {
+	    // 	//currtmp += " " + str;
+	    // 	//System.out.println("Currtmp: " + currtmp);
+	    // 	tmp.add(str);
+	    // 	//System.out.println("Added str: " + str);
+	    // }
+	    // if (str.equals("'")) {
+	    // 	str = " ";
+	    // } else if (str.contains("'")) {
+	    // 	numquote++;
+	    // 	str = str.replace("'", "");
+	    // 	currtmp = str;
+	    // 	if (str.contains("'")) {
+	    // 	    numquote++;
+	    // 	    str = str.replace("'", "");
+	    // 	    System.out.println("Replaced on : " + str);
+	    // 	    tmp.add(str);
+	    // 	}
+	    // } else if ((numquote % 2) != 0) {
+	    // 	if (str.contains("'")) {
+	    // 	    numquote++;
+	    // 	    str = str.replace("'", "");
+	    // 	    currtmp += str;
+	    // 	    tmp.add(currtmp);
+	    // 	    currtmp = "";
+	    // 	} else {
+	    // 	    currtmp += str;
+	    // 	}
+	    // } else {
+	    // }	
+	}
+	/* Return array instead of list */
+	String[] ret = new String[tmp.size()];
+	int x = tmp.size();
+	for (int i = 0; i < x; i++) {
+	    //System.out.println("String checked array: " + tmp.get(i));
+	    ret[i] = tmp.get(i);
+	    //Tryna make spaces by themselves work...
+	    //This isn't running -__-
+	    //if (ret[i].equals("'") && ret[i - 1].equals("'")) {
+	    // 	System.out.println("Activated: " + ret[i]);
+	    // 	ret[i-1] += " ";
+	    // 	//tmp.remove(i);
+	    // 	x--;
+	    // 	i--;
+	    // }
+	    if (ret[i].equals("'")) {
+		System.out.println("Activated: " + ret[i]);
+		tmp.remove(i);
+		i--;
+		x--;
+	    }
+	    System.out.println("String checked array: " + ret[i]);
+	}
+	return ret;
+    }
+
+    private static String[] strcheck(String input) {
+	/* Check for strings, and return array of commands */
+	/* Get strings by themselves */
+	//String[] tmp = input.split("'.*'");
+	//String[] tmp = input.split("'");
+	// String[] ret = new String[tmp.length];
+	// int i = 0;
+	// for (String s : tmp) {
+	//     System.out.println("S: " + s);
+	//     if (s.equals("")) {
+	// 	/* Skip */
+	//     } else {
+	// 	ret[i] = s;
+	// 	i++;
+	//     }
+	// }
+	String[] tmp = input.split(" ");
+	String[] ret = new String[tmp.length];
+	String currstr = "";
+	int x = 0;
+	for (int i = 0; i < tmp.length; i++) {
+	    if (tmp[x].contains("'") && !(tmp[x].endsWith("'"))) {
+		currstr += tmp[x];
+	    // if (tmp[i].contains("'") && !(tmp[i].endsWith("'"))) {
+	    // 	currstr += tmp[i];
+		System.out.println("Currstr: " + currstr);
+	        x = 1;
+		while (!(tmp[i + x].contains("'"))) {
+		    currstr += " " + tmp[i + x];
+		    System.out.println("Currstr added w/ x: " + currstr);
+		    x++;
+		}
+		ret[i] = " " + currstr;
+		currstr = "";
+	    } else {
+		ret[i] = tmp[x];
+	    }
+	}
+	for (String s : ret) {
+	    System.out.println("Ret str: " + s);
+	}
+	return ret;
+    }
+
+		//if (!(search(stack[i]).equals("Notvar") || (search(stack[i]).equals("Str")))) {
+		    //} else if (!(search(stack[i + 1]).equals("Notvar") || (search(stack[i + 1]).equals("Str")))) {
+		    /* Check types - nah, not right now */
+
+/* 
+		       Since we're all stack-based, we gotta find a way 
+		       to start at the end and work backwards
+		    */
+		    int end = i;
+		    /* 
+		       Stop the compiler from whining that endbound might
+		       not have been initialized
+		    */
+		    int endbound = 0;
+		    while (!(stack[i].equals("?"))) {
+			if (stack[i].equals(":")) {
+			    endbound = i;
+			}
+			i--;
+		    }
+		    //actually, if I implement true/false ops, then the
+		    //true/false operation will return first...
+		    i--;
+		    if (stack[i].equals("t")) {
+			System.out.println("true!");
+			// do the thing before :
+			//int x = 0;
+			//String ret;
+			//while ((x + i) < elsei) {
+			//  ret =
+			/* Create new stack to work off of */
+			String[] newstack = new String[(endbound - i)];
+			//for (int z = 0; z < newstack.length; z++) {
+			int z = 0;
+			while (!(stack[i + z].equals(":"))) {
+			    /* Add what needs to be eval'd to stack */
+			    System.out.println("Newstack 1" + stack[i + z]);
+			    newstack[z] = stack[i + z];
+			    z++;
+			}
+			    //}
+			stack[i] = eval(newstack);
+		    } else {
+			//do the thing after :
+			/* Ditto above, but skipping the middle */
+			String[] newstack = new String[(end - endbound)];
+			for (int z = 0; z < newstack.length; z++) {
+			    /* Increment endbound so we don't get colon */
+			    System.out.println("Newstack 2" + stack[i + z]);
+			    newstack[z] = stack[endbound + 1 + z];
+			}
+			stack[i] = eval(newstack);
+		    }
+		    //both of the above will leave junk on the stack
+		    //but I'll deal with that later

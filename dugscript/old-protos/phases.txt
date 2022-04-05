@@ -1,0 +1,56 @@
+Phases:
+1. Basic math *
+	1a. Multiple math operations in one string *
+2. Variables *
+   2a. Arrays *
+       2ai. Array access *
+3. Functional-type returning and subsituting *
+4. String Operations *
+   4a. Split string *
+       Ex:
+	'foo,bar' , split
+	Need to check spaces, esp if they need to be ' '
+   4b. Concat string *
+   4c. Regex replace(?) *
+       Currently an all-replace with String.replace
+       Format:
+	'foo bar' f o replace => 'ooo bar'
+       Can add another that does regex replace all
+5. File and regular I/O *
+   5a. Print out *
+       Ex: 'foo' print => 'foo'
+   5b. Open/read file *
+       Ex: f ~/foo read => f is now the contents of foo
+       (Temporary, might add a read-line doodad or smth)
+           STDIN is represented as "stdin"
+   5c. Open/write to file *
+       Ex: f ~/foo write => writes contents of f to file
+       For now: will always append, won't overwrite
+6. System operation calls *
+   Ex: f dosomething sys => does something with the system, assigns f as the stdout of that
+7. Loops (for, while, etc) - need these to be Turing-complete
+   Ex: loop [do things here] (use the ternary operator for breaking) - maybe
+       NO, 'things' 'cond' loop
+   Ex: array 'do things' for - foreach loop (maybe) *
+       I.e 'foo,bar,baz' 'o a replace' for => faa,bar,baz
+       Equivalent of Perl "$_": loc (local)
+   7a. Also, if-statements for breaking (use ternary operator) *
+       Ex:
+	something something comparison ? do : else ; - this may need rethinking
+	[ do else : do something ! comparison ? - maybe
+	7ai. This means adding comparison operators that return true/false *
+	7aii. Also, add a way to update variables *
+	      Ex: f 1 set f f 1 + set to increment f
+8. Defining own functions *
+   Ex: 'do things here' param,param name defun
+   8a. Need a function to substitute in command and eval and return *
+9. Finishing the REPL + error handling (and not just relying on java errors) *
+   9a. Add a quit command for System.exit(1) in REPL *
+10. Adding ability for string mangling functions to work on variables *
+11. Write reference manual with examples *
+12. Make floats doubles *
+    Double.parseDouble() works for these purposes
+13. Reorganize the code so it looks nice *
+14. Add ability to parse files (so it's an actual scripting lang) *
+    14a. Decide what the file extension should be *
+    14b. Have ability to ignore comment lines (starting with the #) *

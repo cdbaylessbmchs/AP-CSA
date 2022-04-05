@@ -1,0 +1,65 @@
+Using Functions
+
+Somewhat tricky
+
+Have mfunc object with array of parameters
+Match given parameters with arrayed parameters, then eval
+
+ISSUE: leaving func name on stack
+FIX: adding a break statement for func eval
+EXAMPLE:
+>> 'f @ split' f foo defun foo@bar@baz foo
+Stack[0] foo,bar,baz
+Eval'd func: foo,bar,baz
+In stack: foo,bar,baz at 0
+In stack: f at 1
+In stack: foo at 2
+In stack: null at 3
+In stack: null at 4
+In stack: null at 5
+In stack: null at 6
+In stack: null at 7
+In stack: null at 8
+In stack: null at 9
+In stack: null at 10
+In stack: null at 11
+In stack: null at 12
+In stack: null at 13
+In stack: null at 14
+In stack: null at 15
+In stack: null at 16
+In stack: null at 17
+In stack: null at 18
+In stack: null at 19
+In stack: null at 20
+In stack: null at 21
+In stack: null at 22
+In stack: null at 23
+In stack: null at 24
+In stack: null at 25
+In stack: null at 26
+In stack: null at 27
+In stack: null at 28
+In stack: null at 29
+In stack: null at 30
+In stack: null at 31
+In stack: null at 32
+In stack: null at 33
+In stack: null at 34
+In stack: null at 35
+In stack: null at 36
+In stack: null at 37
+In stack: null at 38
+In stack: null at 39
+In stack: null at 40
+In stack: null at 41
+In stack: null at 42
+In stack: null at 43
+In stack: null at 44
+In stack: null at 45
+In stack: null at 46
+In stack: null at 47
+In stack: null at 48
+In stack: null at 49
+Stack[0] foo
+foo

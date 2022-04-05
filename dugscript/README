@@ -69,7 +69,10 @@ File I/O:
      	   Ex: f ~/foo read => f is now the contents of ~/foo
      Write a string into a file
      	   Ex: f ~/foo write => writes contents of f to file
-     
+
+For Loop:
+	Foreach loop only
+	Ex: 'foo,bar,baz' 'o a replace' for => faa,bar,baz
 
 System Calls:
        Returns a variable with the stdout of the syscall made

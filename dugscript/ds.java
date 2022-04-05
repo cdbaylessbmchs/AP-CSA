@@ -530,7 +530,7 @@ public class ds {
 	       the variable list is global and anything new
 	       will remain in the runtime
 	    */
-	    System.out.println(eval(finalarr));
+	    //System.out.println(eval(finalarr));
 	}
     }
 

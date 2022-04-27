@@ -1,0 +1,47 @@
+List of things we need to do for executing in-program
+
+NOTE: it's already an async thing, so we're grooving
+
+SEE regextest.java FOR TESTING
+
+Extensions for pictures:
+	   Form: PIC=
+	   (dot) jpeg, jpg, png, gif, tiff, bmp
+	   The odd man out here is webp, but we can slap that in with html et al
+
+	   Regex: \.(jp(e)|pn|)g|t(if(f)) - should get everything except bmp
+	   	  .+\\.(jp(e|)g|png|gif|tiff) - actual one to use
+
+Extensions for textfiles:
+	   Form: TXT=
+	   (dot) txt, md, yaml, toml, ini, json, xml
+
+	   Regex: \.(txt|md|(ya|to|x)ml|ini|json)
+	   	  .+\\.(txt|md|(ya|to|x)ml|ini|json) - actual
+
+Extensions for videos:
+	   Form: VID=
+	   (dot) mkv, vob, avi, mov, wmv, mp4, m4p, m4v, mpg, mp2, mpeg, mpe, mpv, m2v
+
+	   Regex: .+\\.(vob|avi|m(k|o|m|p|4)(v|4|p|g|2|e(g)))
+	   	  .+\\.(wmv|vob|avi|m(k|o|m|p|4|2)(v|4|p|g|2|e(g|))) - actual
+
+Extensions for music/audio:
+	   Form: MUS=
+	   (dot) mp3, ogg, flac, m4a, m4b, opus, wav, wma
+
+	   Regex: .+\\.(o(gg|pus)|w(av|ma)|m(p|4)(3|[a-b])|flac) - actual
+
+Un-extensioned/default:
+	Form: DEF=
+
+
+Odd ones out: html/webp/webm/etc, pdf
+
+Executables need handling as well
+
+Could add $ to the end of all the regexes so it only matches file extensions
+
+Creating new extension associations:
+	 [.c or w/e]=[progname]
+	 

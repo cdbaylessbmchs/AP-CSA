@@ -1,0 +1,16 @@
+	//can't read directories like files...
+	// try {
+	//     BufferedReader reader = Files.newBufferedReader(dir);
+	//     System.out.println("Entry: " + reader.readLine());
+	// } catch (IOException e) {
+	//     e.printStackTrace();
+	// }
+	//System.out.println(indir);
+	//works for jpg, png, and tiff
+	//"\\.((j(p)|pn)g|((g|t)if(f)))"
+	
+	//works for jpeg, png, and tiff
+	//".+\\.((jp(e)|pn)g|((g|t)if(f)))"
+
+	//matches everything
+	//.+\\.(jp(e|)g|png|gif|tiff)

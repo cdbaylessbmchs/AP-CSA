@@ -1,0 +1,8 @@
+DEF=emacs
+PIC=emacs
+#this is a comment
+VID=vlc
+TXT=code
+#ya see?
+.pl=code
+MUS=vlc
